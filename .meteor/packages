@@ -8,6 +8,9 @@ meteor-platform
 autopublish
 insecure
 accounts-password
-accounts-ui
 coffeescript
 twbs:bootstrap
+meteorhacks:flow-layout
+meteorhacks:flow-router
+less
+ian:accounts-ui-bootstrap-3
