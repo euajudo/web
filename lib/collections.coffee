@@ -24,8 +24,8 @@
 		optional: true
 	'mainMedia.type':
 		type: String
-		allowedValues: ['Image', 'Video']
-		defaultValue: 'Image'
+		allowedValues: ['image', 'video']
+		defaultValue: 'image'
 	'mainMedia.url':
 		label: 'Image URL'
 		type: String
