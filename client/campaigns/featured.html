@@ -1,0 +1,10 @@
+<template name="FeaturedCampaigns">
+	<div class="container">
+		{{#each campaigns}}
+			<div class="col-sm-4 campaign">
+				<h3>{{name}}</h3>
+				<p>{{description}}</p>
+			</div>
+		{{/each}}
+	</div>
+</template>
