@@ -1,0 +1,14 @@
+<head>
+	<title>Eu Ajudo</title>
+</head>
+
+<body>
+  {{> FeaturedCampaigns}}
+</body>
+
+<template name="FeaturedCampaigns">
+	{{#each campaigns}}
+		<h3>{{name}}</h3>
+		<p>{{description}}</p>
+	{{/each}}
+</template>
