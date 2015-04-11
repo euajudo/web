@@ -37,6 +37,7 @@
 		type: Object
 		label: 'Criado por'
 		autoValue: ->
+			if @value then return @value
 			return {
 				_id: @userId
 				name: Users.findOne(@userId).profile.name or Users.findOne(@userId).emails[0].address
