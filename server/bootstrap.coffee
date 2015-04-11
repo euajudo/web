@@ -5,6 +5,7 @@
 			password: '123456'
 			profile:
 				name: 'Usuário Teste'
+				type: 'Person'
 
 
 	if Campaigns.find().count() is 0

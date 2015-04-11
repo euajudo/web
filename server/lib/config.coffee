@@ -1,0 +1,1 @@
+process.env.SITE_URL = 'http://euajudo.meteor.com'
