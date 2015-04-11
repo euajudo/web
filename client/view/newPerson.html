@@ -1,0 +1,18 @@
+<template name="NewPersonView">
+	{{> header}}
+
+	<div class="container">
+		{{#autoForm schema=contactFormSchema id="contactForm" type="method" meteormethod="newPerson"}}
+			<fieldset>
+				<legend>Criar conta</legend>
+				{{> afQuickField name="name"}}
+				{{> afQuickField name="email"}}
+				{{> afQuickField name="password"}}
+				{{> afQuickField name="passwordConfirmation"}}
+				<div>
+					<button type="submit" class="btn btn-primary">Criar</button>
+				</div>
+			</fieldset>
+		{{/autoForm}}
+	</div>
+</template>

@@ -17,6 +17,7 @@ SimpleSchema.messages
 	expectedArray: '[label] must be an array'
 	expectedObject: '[label] must be an object'
 	expectedConstructor: '[label] must be a [type]'
+	mustBeEqual: '[label] não é valido'
 	regEx: [
 		{msg: '[label] failed regular expression validation'}
 		{exp: SimpleSchema.RegEx.Email, msg: '[label] must be a valid e-mail address'}

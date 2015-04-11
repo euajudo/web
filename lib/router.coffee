@@ -30,6 +30,6 @@ FlowRouter.route '/minhas-campanhas',
 		FlowLayout.render 'MyCampaignsView', {campaigns: 'MyCampaigns'}
 
 
-FlowRouter.route '/login',
+FlowRouter.route '/criar-conta',
 	action: (params) ->
-		FlowLayout.render 'LoginView'
+		FlowLayout.render 'NewPersonView'
