@@ -40,6 +40,7 @@
 			return {
 				_id: @userId
 				name: Users.findOne(@userId).profile.name or Users.findOne(@userId).emails[0].address
+				type: Users.findOne(@userId).profile.type
 			}
 	'user._id':
 		type: String
