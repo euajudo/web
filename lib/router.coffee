@@ -33,3 +33,8 @@ FlowRouter.route '/minhas-campanhas',
 FlowRouter.route '/criar-conta',
 	action: (params) ->
 		FlowLayout.render 'NewPersonView'
+
+
+FlowRouter.route '/criar-organizacao',
+	action: (params) ->
+		FlowLayout.render 'NewOrganizationView'

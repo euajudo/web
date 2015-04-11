@@ -1,3 +1,3 @@
 Template.NewPersonView.helpers
-	contactFormSchema: ->
+	formSchema: ->
 		return Schema.newPerson
