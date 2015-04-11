@@ -39,7 +39,7 @@
 		autoValue: ->
 			return {
 				_id: @userId
-				name: Users.findOne(@userId).profile.name
+				name: Users.findOne(@userId).profile.name or Users.findOne(@userId).emails[0].address
 			}
 	'user._id':
 		type: String

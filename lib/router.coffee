@@ -18,10 +18,16 @@ FlowRouter.route '/campanha/:campaignName/:campaignId',
 		FlowLayout.render 'CampaignView'
 
 
-FlowRouter.route '/novacampanha/',
+FlowRouter.route '/nova-campanha',
 	middlewares: [requiredLogin]
 	action: (params) ->
 		FlowLayout.render 'NewCampaignView'
+
+
+FlowRouter.route '/minhas-campanhas',
+	middlewares: [requiredLogin]
+	action: (params) ->
+		FlowLayout.render 'MyCampaignsView', {campaigns: 'MyCampaigns'}
 
 
 FlowRouter.route '/login',
