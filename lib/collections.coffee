@@ -3,8 +3,9 @@
   @param createdAt
   @param description
   @param mainMedia
-    - type
+    - type [video, image]
     - url
+    - videoUrl
 ###
 @Campaigns = new Meteor.Collection 'campaigns'
 
