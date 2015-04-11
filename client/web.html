@@ -3,12 +3,34 @@
 </head>
 
 <body>
-  {{> FeaturedCampaigns}}
+	{{> FeaturedCampaigns}}
+
+	<div class="container">
+		<h4>Campanhas</h4>
+	</div>
+
+	{{> AllCampaigns}}
 </body>
 
 <template name="FeaturedCampaigns">
-	{{#each campaigns}}
-		<h3>{{name}}</h3>
-		<p>{{description}}</p>
-	{{/each}}
+	<div class="container">
+		{{#each campaigns}}
+			<div class="col-sm-4">
+				<h3>{{name}}</h3>
+				<p>{{description}}</p>
+			</div>
+		{{/each}}
+	</div>
+</template>
+
+
+<template name="AllCampaigns">
+	<div class="container">
+		{{#each campaigns}}
+			<div class="col-sm-3">
+				<h3>{{name}}</h3>
+				<p>{{description}}</p>
+			</div>
+		{{/each}}
+	</div>
 </template>
