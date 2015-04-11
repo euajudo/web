@@ -33,6 +33,14 @@
 		regEx: SimpleSchema.RegEx.Url
 		optional: true
 
+	user:
+		type: Object
+		label: 'Criado por'
+	'user._id':
+		type: String
+	'user.name':
+		type: String
+
 
 ### Users
 	@param email
