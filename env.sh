@@ -1,1 +1,0 @@
-export MAIL_URL=smtp://euajudoemail:sLLkw3mZNY6gsv@smtp.gmail.com:465
