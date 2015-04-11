@@ -36,6 +36,11 @@
 	user:
 		type: Object
 		label: 'Criado por'
+		autoValue: ->
+			return {
+				_id: @userId
+				name: Users.findOne(@userId).profile.name
+			}
 	'user._id':
 		type: String
 	'user.name':
