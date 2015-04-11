@@ -1,5 +1,5 @@
 requiredLogin = (path, next) ->
-	redirectPath = if (!Meteor.userId()) then "/login" else null
+	redirectPath = if (!Meteor.userId()) then "/" else null
 	next redirectPath
 
 FlowRouter.route '/',

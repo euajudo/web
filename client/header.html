@@ -19,7 +19,11 @@
 					<li><a href="/minhas-campanhas">Minhas campanhas</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					{{> loginButtons}}
+					{{#if currentUser}}
+						{{> profileButton}}
+					{{else}}
+						{{> loginButtons}}
+					{{/if}}
 				</ul>
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
