@@ -24,11 +24,14 @@
 		optional: true
 	'mainMedia.type':
 		type: String
-		allowedValues: ['Person', 'Organization'],
+		allowedValues: ['Image', 'Video']
+		defaultValue: 'Image'
 	'mainMedia.url':
+		label: 'Image URL'
 		type: String
 		regEx: SimpleSchema.RegEx.Url
 	'mainMedia.videoUrl':
+		label: 'Video URL'
 		type: String
 		regEx: SimpleSchema.RegEx.Url
 		optional: true
@@ -56,3 +59,7 @@
 	@param type [organization, person]
 ###
 @Users = Meteor.users
+
+
+Images = new FS.Collection "images",
+	stores: [new FS.Store.GridFS "images"]

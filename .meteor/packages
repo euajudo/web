@@ -18,3 +18,7 @@ aldeed:collection2
 aldeed:autoform
 momentjs:moment
 lbee:moment-helpers
+cfs:gridfs
+cfs:collection
+cfs:filesystem
+cfs:standard-packages

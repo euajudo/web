@@ -6,6 +6,8 @@
 				<legend>Criar campanha</legend>
 				{{> afQuickField name='name'}}
 				{{> afQuickField name='description' rows=6}}
+				{{> afQuickField name="mainMedia.url"}}
+				{{> afQuickField name="mainMedia.videoUrl"}}
 			</fieldset>
 			<button type="submit" class="btn btn-primary">Salvar</button>
 		{{/autoForm}}
