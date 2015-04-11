@@ -30,10 +30,11 @@
 		label: 'Image URL'
 		type: String
 		regEx: SimpleSchema.RegEx.Url
+		optional: true
 	'mainMedia.videoUrl':
 		label: 'Video URL'
 		type: String
-		regEx: SimpleSchema.RegEx.Url
+		# regEx: SimpleSchema.RegEx.Url
 		optional: true
 
 	user:
