@@ -1,21 +1,13 @@
-### Campaings
-	@param name
-	@param createdAt
-	@param description
-	@param mainMedia
-		- type [video, image]
-		- url
-		- videoUrl
-###
 @Campaigns = new Meteor.Collection 'campaigns'
 @Campaigns.attachSchema new SimpleSchema
 	name:
 		type: String
 		label: "Nome"
-		max: 200
+		max: 100
 	description:
 		type: String
 		label: "Descrição"
+		max: 10000
 	createdAt:
 		type: Date
 		label: "Criado em"

@@ -74,13 +74,13 @@
 <template name="NewCampaignView">
 	{{> header}}
 	<div class="container">
-		{{#autoForm collection="Campaigns" id="insertCampaignForm" type="insert" buttonContent="Salvar"}}
+		{{#autoForm collection="Campaigns" id="insertCampaignForm" type="insert"}}
 			<fieldset>
 				<legend>Criar campanha</legend>
 				{{> afQuickField name='name'}}
-				{{> afQuickField name='description'}}
+				{{> afQuickField name='description' rows=6}}
 			</fieldset>
-			<button type="submit" class="btn btn-primary">Insert</button>
+			<button type="submit" class="btn btn-primary">Salvar</button>
 		{{/autoForm}}
 	</div>
 </template>
