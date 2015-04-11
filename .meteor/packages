@@ -14,3 +14,6 @@ meteorhacks:flow-layout
 meteorhacks:flow-router
 less
 ian:accounts-ui-bootstrap-3
+aldeed:collection2
+aldeed:autoform
+momentjs:moment
