@@ -61,3 +61,5 @@ thumbs.db
 tramp
 typo3temp
 meteor-vulcanize
+env.sh
+settings.json
