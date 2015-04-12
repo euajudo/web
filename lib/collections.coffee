@@ -42,6 +42,7 @@
 		label: 'Criado por'
 		autoValue: ->
 			if @value then return @value
+
 			return {
 				_id: @userId
 				name: Users.findOne(@userId).profile.name or Users.findOne(@userId).emails[0].address
@@ -51,6 +52,9 @@
 		type: String
 	'user.name':
 		type: String
+	'user.type':
+		type: String
+		allowedValues: ['Person', 'Organization']
 
 	type:
 		type: String
