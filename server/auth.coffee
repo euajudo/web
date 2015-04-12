@@ -1,6 +1,6 @@
 Meteor.methods
 	newPerson: (doc) ->
-		check doc, Schema.newPerson
+		Schema.newPerson.newContext().validate doc
 
 		Accounts.createUser
 			email: doc.email
@@ -11,7 +11,7 @@ Meteor.methods
 
 
 	newOrganization: (doc) ->
-		check doc, Schema.newOrganization
+		Schema.newOrganization.newContext().validate doc
 
 		Accounts.createUser
 			email: doc.email
