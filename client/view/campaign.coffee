@@ -4,7 +4,6 @@ Template.CampaignView.helpers
 
 	hasDonation: ->
 		campaign = Campaigns.findOne({_id: Session.get('CurrentCampaign')})
-		console.log campaign
 		return campaign?.donations?[Meteor.userId()]?
 
 	donationValue: ->
@@ -30,7 +29,8 @@ Template.CampaignView.events
 
 	'click #donateCampaign': ->
 		if not Meteor.userId()?
-			FlowRouter.go '/criar-conta'
+			# FlowRouter.go '/criar-conta'
+			return $('#LoginModal').modal()
 
 		Session.set 'helpActivated', false
 		campaign = Campaigns.findOne({_id: Session.get('CurrentCampaign')})
