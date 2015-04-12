@@ -1,7 +1,14 @@
 <template name="CampaignView">
 	{{> header}}
 	<div class="container">
-		<h3>{{campaign.name}}</h3>
-		<p>{{campaign.description}}</p>
+		<div class="col-md-8">
+			<h1>{{campaign.name}}</h1>
+			<img class="campaign-main-image" src="{{campaign.mainMedia.url}}" />
+			<p>{{campaign.description}}</p>
+		</div>
+
+		<div class="col-md-4">
+			<h3>{{campaign.name}}</h3>
+		</div>
 	</div>
 </template>
