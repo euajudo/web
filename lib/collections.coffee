@@ -52,6 +52,15 @@
 	'user.name':
 		type: String
 
+	type:
+		type: String
+		allowedValues: ['monthly', 'one']
+		defaultValue: 'monthly'
+	targetValue:
+		type: Number
+	donatedValue:
+		type: Number
+
 
 ### Users
 	@param email
