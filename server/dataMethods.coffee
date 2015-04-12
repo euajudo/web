@@ -9,6 +9,16 @@ Meteor.methods
 		if @userId?
 			return Meteor.users.findOne(@userId)
 
+	donate: (value, campaignId) ->
+		d = {}
+		d["donations.#{@userId}"] = value: value
+		Campaigns.update campaignId,
+			$set: d
+			$inc:
+				donatedValue: value
+
+		return Campaigns.findOne campaignId
+
 	bootstrap: ->
 		Campaigns.remove({})
 		Users.remove({})

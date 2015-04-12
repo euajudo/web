@@ -5,30 +5,30 @@ headers =
 	"user-agent": 'Mozilla/4.0'
 
 
-preferencesData = {
-	"notification": {
-		"webhook": {
-			"url": "https://euajudo.localtunnel.me/assinaturas"
-		},
-		"email": {
-			"merchant": {
-				"enabled": true
-			},
-			"customer": {
-				"enabled": true
-			}
-		}
-	}
-}
-
-preferencesResponse = HTTP.post 'https://sandbox.moip.com.br/assinaturas/v1/users/preferences',
-	data: preferencesData
-	headers: headers
-
-# console.log 'preferencesResponse', preferencesResponse
-
 Meteor.methods
 	plan: ->
+		preferencesData = {
+			"notification": {
+				"webhook": {
+					"url": "https://euajudo.localtunnel.me/assinaturas"
+				},
+				"email": {
+					"merchant": {
+						"enabled": true
+					},
+					"customer": {
+						"enabled": true
+					}
+				}
+			}
+		}
+
+		preferencesResponse = HTTP.post 'https://sandbox.moip.com.br/assinaturas/v1/users/preferences',
+			data: preferencesData
+			headers: headers
+
+		# console.log 'preferencesResponse', preferencesResponse
+		
 		planData =
 			"code": "plano-" + Date.now()
 			"name": "Plano Especial"

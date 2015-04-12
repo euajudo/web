@@ -23,18 +23,24 @@
 			{{#if helpActivated}}
 				<div class="form-group">
 					<label for="exampleInputEmail1">Ajudar mensalmente com (R$):</label>
-					<input type="number" class="form-control input-block" value="10">
+					<input type="number" class="form-control input-block" id="donateInput" value="10">
 				</div>
 				<a href="#" class="btn btn-default btn-lg btn-block" id="donateCampaign">Doar</a>
-				<a href="#" class="btn btn-default btn-lg btn-block btn-danger" id="cancelDonate">Não doar</a>
+				<a href="#" class="btn btn-default btn-lg btn-block btn-link text-danger" id="cancelDonate">Cancelar</a>
 			{{else}}
-				<a href="#" class="btn btn-default btn-lg btn-block" id="helpCampaign">Ajudar Campanha</a>
+				{{#if hasDonation}}
+					<div class="btn btn-default btn-lg btn-block">Você já está doando R$ {{formatNumber donationValue}}</div>
+				{{else}}
+					<a href="#" class="btn btn-default btn-lg btn-block" id="helpCampaign">Ajudar Campanha</a>
+				{{/if}}
 			{{/if}}
 			<div class="values">
 				Arrecadado: <span>R$ {{formatNumber campaign.donatedValue}}</span>
 			</div>
 			<div class="donate-bar">
-				<div class="donate-bar-content" style="margin-right: {{percent}}%"></div>
+				{{#with campaign}}
+					<div class="donate-bar-content" style="margin-right: {{percent}}%"></div>
+				{{/with}}
 			</div>
 			<div class="values text-right">
 				Objetivo: <span>R$ {{formatNumber campaign.targetValue}}</span>

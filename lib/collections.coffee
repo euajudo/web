@@ -40,14 +40,14 @@
 	user:
 		type: Object
 		label: 'Criado por'
-		autoValue: ->
-			if @value then return @value
+		# autoValue: ->
+		# 	if @value then return @value
 
-			return {
-				_id: @userId
-				name: Users.findOne(@userId).profile.name or Users.findOne(@userId).emails[0].address
-				type: Users.findOne(@userId).profile.type
-			}
+		# 	return {
+		# 		_id: @userId
+		# 		name: Users.findOne(@userId).profile.name or Users.findOne(@userId).emails[0].address
+		# 		type: Users.findOne(@userId).profile.type
+		# 	}
 	'user._id':
 		type: String
 	'user.name':
@@ -64,6 +64,11 @@
 		type: Number
 	donatedValue:
 		type: Number
+
+	donations:
+		type: Object
+		optional: true
+		blackbox: true
 
 
 ### Users
