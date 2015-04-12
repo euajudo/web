@@ -20,7 +20,16 @@
 		</div>
 
 		<div class="col-md-4 sidebar">
-			<a href="" class="btn btn-default btn-lg btn-block">Ajudar Campanha</a>
+			{{#if helpActivated}}
+				<div class="form-group">
+					<label for="exampleInputEmail1">Ajudar mensalmente com (R$):</label>
+					<input type="number" class="form-control input-block" value="10">
+				</div>
+				<a href="#" class="btn btn-default btn-lg btn-block" id="donateCampaign">Doar</a>
+				<a href="#" class="btn btn-default btn-lg btn-block btn-danger" id="cancelDonate">Não doar</a>
+			{{else}}
+				<a href="#" class="btn btn-default btn-lg btn-block" id="helpCampaign">Ajudar Campanha</a>
+			{{/if}}
 			<div class="values">
 				Arrecadado: <span>R$ {{formatNumber campaign.donatedValue}}</span>
 			</div>
