@@ -10,7 +10,6 @@
 		label: 'E-mail'
 	type:
 		type: String
-		regEx: SimpleSchema.RegEx.Email
 		allowedValues: ['Person', 'Organization']
 		defaultValue: 'Person'
 		label: 'Tipo'
