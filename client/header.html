@@ -8,7 +8,11 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="/">Eu Ajudo</a>
+				{{#if inverted}}
+					<a class="" href="/"><img src="/logo_web_sobre_rosa.png" alt="" height="46"></a>
+				{{else}}
+					<a class="navbar-brand" href="/"><img src="/logo_web_sobre_branco.png" alt="" height="30" style="margin-top: -5px;"></a>
+				{{/if}}
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
