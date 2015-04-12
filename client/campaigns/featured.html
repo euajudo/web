@@ -1,11 +1,37 @@
 <template name="FeaturedCampaigns">
 	<div class="container">
 		{{#each campaigns}}
-			<div class="col-sm-4 campaign">
-				<h3>{{name}}</h3>
-				<small class="text-muted">{{moFromNow createdAt}}</small>
-				<p>{{description}}</p>
-				<small class="text-muted">{{user.name}}</small>
+			<div class="col-sm-4 col-xs-6">
+				<div class="campaign">
+					<div class="campaign-media">
+						
+					</div>
+					<div class="campaign-content">
+						<div class="title">
+							{{name}}
+						</div>
+						<div class="description">
+							{{description}}
+						</div>
+						<div class="user">
+							Por <span>{{user.name}}</span>
+						</div>
+						<div class="location">
+							<i class="fa fa-map-marker"></i> <span>Location, LL</span>
+						</div>
+						<div class="bar">
+							<div class="bar-content"></div>
+						</div>
+						<div class="values">
+							<div class="pull-left">
+								Arrecadado: <span>R$ 2.345</span>
+							</div>
+							<div class="pull-right">
+								Objetivo: <span>R$ 6.000</span>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		{{/each}}
 	</div>
