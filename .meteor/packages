@@ -22,3 +22,4 @@ cfs:gridfs
 cfs:collection
 cfs:filesystem
 cfs:standard-packages
+fortawesome:fontawesome
