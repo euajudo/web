@@ -1,8 +1,11 @@
 Meteor.methods
-	allCampaigns: ->
-		if not @userId?
-			return 401
+	userCampaigns: (userId) ->
+		data = Campaigns.find({'user._id': userId}, {sort: {createdAt: 1}}).fetch()
+		for item in data
+			item.canonicalUrl = encodeURI("#{process.env.SITE_URL}/campanha/#{item.name}/#{item._id}")
+		return data
 
+	allCampaigns: ->
 		data = Campaigns.find({}, {sort: {createdAt: 1}}).fetch()
 		for item in data
 			item.canonicalUrl = encodeURI("#{process.env.SITE_URL}/campanha/#{item.name}/#{item._id}")
