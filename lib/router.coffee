@@ -9,7 +9,7 @@ FlowRouter.route '/',
 
 	action: (params) ->
 		# console.log("Yeah! We are on the post:", params.postId);
-		FlowLayout.render('DashboardView', {featured: 'FeaturedCampaigns', campaigns: 'AllCampaigns'});
+		FlowLayout.render('DashboardView', {featured: 'FeaturedCampaigns'});
 
 
 FlowRouter.route '/campanha/:campaignName/:campaignId',
@@ -28,6 +28,18 @@ FlowRouter.route '/minhas-campanhas',
 	middlewares: [requiredLogin]
 	action: (params) ->
 		FlowLayout.render 'MyCampaignsView', {campaigns: 'MyCampaigns'}
+
+
+FlowRouter.route '/minhas-doacoes',
+	middlewares: [requiredLogin]
+	action: (params) ->
+		FlowLayout.render 'MyDonatedCampaignsView'
+
+
+FlowRouter.route '/campanhas-do-usuario/:username/:userId',
+	action: (params) ->
+		Session.set 'userId', params.userId
+		FlowLayout.render 'UserCampaignsView'
 
 
 FlowRouter.route '/criar-conta',

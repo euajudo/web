@@ -1,44 +1,7 @@
 <template name="FeaturedCampaigns">
 	<div class="campaign-container">
 		{{#each campaigns}}
-			<div class="campaign-card">
-				<div class="campaign">
-					<div class="campaign-media">
-						{{#if mainMedia.videoUrl}}
-							<iframe id="ytplayer" type="text/html"  height="170" width="300" src="http://www.youtube.com/embed/{{mainMedia.videoUrl}}?autoplay=0&origin=http://example.com" frameborder="0"></iframe>
-						{{else}}
-							{{#if mainMedia.url}}
-								<div class="campaign-media-image" style="background-image: url({{mainMedia.url}})"></div>
-							{{/if}}
-						{{/if}}
-					</div>
-					<div class="campaign-content">
-						<div class="title">
-							{{name}}
-						</div>
-						<div class="description">
-							{{description}}
-						</div>
-						<div class="user">
-							Por <span>{{user.name}}</span>
-						</div>
-						<!-- <div class="location">
-							<i class="fa fa-map-marker"></i> <span>Location, LL</span>
-						</div> -->
-						<div class="bar">
-							<div class="bar-content" style="margin-right: {{percent}}%"></div>
-						</div>
-						<div class="values">
-							<div class="pull-left">
-								Arrecadado: <span>R$ {{formatNumber donatedValue}}</span>
-							</div>
-							<div class="pull-right">
-							Objetivo: <span>R$ {{formatNumber targetValue}}</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			{{> CampaignCard}}
 		{{/each}}
 	</div>
 </template>
