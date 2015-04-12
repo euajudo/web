@@ -38,3 +38,8 @@ FlowRouter.route '/criar-conta',
 FlowRouter.route '/criar-organizacao',
 	action: (params) ->
 		FlowLayout.render 'NewOrganizationView'
+
+
+FlowRouter.route '/sobre',
+	action: (params) ->
+		FlowLayout.render 'SobreView'
