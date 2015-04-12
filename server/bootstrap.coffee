@@ -59,8 +59,9 @@
 			user: getUser('Por Pão dos Pobres')
 			createdAt: new Date
 			mainMedia:
-				type: 'image'
-				url: process.env.SITE_URL + '/01.jpg'
+				type: 'video'
+				url: 'http://img.youtube.com/vi/ZTA8u8oDYUc/hqdefault.jpg'
+				videoUrl: 'ZTA8u8oDYUc'
 			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga porro nulla quos, numquam quaerat sunt ducimus a nesciunt dolor ad, aut excepturi repellat eveniet! Praesentium ipsa cupiditate placeat et fugit.'
 			type: 'monthly'
 			targetValue: 6000
