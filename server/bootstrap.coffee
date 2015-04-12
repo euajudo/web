@@ -5,42 +5,42 @@
 			email: 'pao-dos-pobres@euajudo.io'
 			password: '123456'
 			profile:
-				name: 'Por Pão dos Pobres'
+				name: 'Pão dos Pobres'
 				type: 'Person'
 
 		Accounts.createUser
 			email: 'leonardo-konarzewski@euajudo.io'
 			password: '123456'
 			profile:
-				name: 'Por Leonardo Konarzewski'
+				name: 'Leonardo Konarzewski'
 				type: 'Person'
 
 		Accounts.createUser
 			email: 'asilo-padre-cacique@euajudo.io'
 			password: '123456'
 			profile:
-				name: 'Por Asilo Padre Cacique'
+				name: 'Asilo Padre Cacique'
 				type: 'Person'
 
 		Accounts.createUser
 			email: 'rafaela-mendonca@euajudo.io'
 			password: '123456'
 			profile:
-				name: 'Por Rafaela Mendonça'
+				name: 'Rafaela Mendonça'
 				type: 'Person'
 
 		Accounts.createUser
 			email: 'felipe-madeira@euajudo.io'
 			password: '123456'
 			profile:
-				name: 'Por Felipe Madeira'
+				name: 'Felipe Madeira'
 				type: 'Person'
 
 		Accounts.createUser
 			email: 'joana-silva@euajudo.io'
 			password: '123456'
 			profile:
-				name: 'Por Joana Silva'
+				name: 'Joana Silva'
 				type: 'Person'
 
 

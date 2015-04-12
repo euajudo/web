@@ -153,12 +153,21 @@ body {
 	font-size: 32px;
 }
 
+.navbar-header > a > img {
+	margin-right: 25px;
+}
+
 .navbar.navbar-default {
 	margin-bottom: 0px;
 	background-color: #fff;
 	border: none;
 	border-radius: 0px;
 	box-shadow: 0px 0px 2px rgba(0,0,0,.3);
+	.nav > li > a {
+		font-size: 18px;
+		margin-top: -1px;
+		padding: 15px 25px;
+	}
 }
 
 .navbar.navbar-default.navbar-inverted {
@@ -182,6 +191,7 @@ body {
 }
 
 .campaign-detail {
+	margin-bottom: 30px;
 
 	.title {
 		font-size: 32px;
@@ -210,6 +220,9 @@ body {
 			background-color: #00B200;
 			border: none;
 			color: white;
+			&:hover {
+				opacity: .8;
+			}
 		}
 
 		#helpCampaign, #cancelDonate {
