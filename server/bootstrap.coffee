@@ -56,7 +56,7 @@
 		# [Location] Porto Alegre, RS
 		Campaigns.insert
 			name: "Pão dos Pobres"
-			user: getUser('Por Pão dos Pobres')
+			user: getUser('Pão dos Pobres')
 			createdAt: new Date
 			mainMedia:
 				type: 'video'
@@ -71,7 +71,7 @@
 		# [Location] Porto Alegre, RS
 		Campaigns.insert
 			name: "Ajude-me a Vencer o Câncer!"
-			user: getUser('Por Leonardo Konarzewski')
+			user: getUser('Leonardo Konarzewski')
 			createdAt: new Date
 			mainMedia:
 				type: 'image'
@@ -85,7 +85,7 @@
 		# [Location] Porto Alegre, RS
 		Campaigns.insert
 			name: "Asilo Padre Cacique"
-			user: getUser('Por Asilo Padre Cacique')
+			user: getUser('Asilo Padre Cacique')
 			createdAt: new Date
 			mainMedia:
 				type: 'image'
@@ -99,7 +99,7 @@
 		# [Location] Curitiba, PR
 		Campaigns.insert
 			name: "Ajude o João"
-			user: getUser('Por Rafaela Mendonça')
+			user: getUser('Rafaela Mendonça')
 			createdAt: new Date
 			mainMedia:
 				type: 'image'
@@ -113,7 +113,7 @@
 		# [Location] São Paulo, SP
 		Campaigns.insert
 			name: "Animais Carentes"
-			user: getUser('Por Felipe Madeira')
+			user: getUser('Felipe Madeira')
 			createdAt: new Date
 			mainMedia:
 				type: 'image'
@@ -127,7 +127,7 @@
 		# [Location] Gravataí, RS
 		Campaigns.insert
 			name: "Doação para Vila Maria"
-			user: getUser('Por Joana Silva')
+			user: getUser('Joana Silva')
 			createdAt: new Date
 			mainMedia:
 				type: 'image'
@@ -197,5 +197,5 @@
 		# 	donatedValue: 212450
 
 
-Meteor.startup ->
-	Bootstrap()
+# Meteor.startup ->
+# 	Bootstrap()
