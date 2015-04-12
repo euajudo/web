@@ -24,3 +24,10 @@ cfs:filesystem
 cfs:standard-packages
 fortawesome:fontawesome
 benoitt:intl
+meteorhacks:npm
+
+
+npm-container
+meteorhacks:async
+http
+meteorhacks:picker
