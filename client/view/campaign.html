@@ -1,14 +1,46 @@
 <template name="CampaignView">
 	{{> header}}
-	<div class="container">
+	<div class="container campaign-detail">
 		<div class="col-md-8">
-			<h1>{{campaign.name}}</h1>
-			<img class="campaign-main-image" src="{{campaign.mainMedia.url}}" />
-			<p>{{campaign.description}}</p>
+			<div class="title">
+				{{campaign.name}}
+			</div>
+			<div class="campaign-media">
+				{{#if campaign.mainMedia.videoUrl}}
+					<iframe id="ytplayer" type="text/html" height="400" width="100%" src="http://www.youtube.com/embed/{{campaign.mainMedia.videoUrl}}?autoplay=0&origin=http://example.com" frameborder="0"></iframe>
+				{{else}}
+					{{#if campaign.mainMedia.url}}
+						<div class="campaign-media-image" style="background-image: url({{campaign.mainMedia.url}})"></div>
+					{{/if}}
+				{{/if}}
+			</div>
+			<div class="description">
+				{{campaign.description}}
+			</div>
 		</div>
 
-		<div class="col-md-4">
-			<h3>{{campaign.name}}</h3>
+		<div class="col-md-4 sidebar">
+			<a href="" class="btn btn-default btn-lg btn-block">Ajudar Campanha</a>
+			<div class="values">
+				Arrecadado: <span>R$ {{formatNumber campaign.donatedValue}}</span>
+			</div>
+			<div class="donate-bar">
+				<div class="donate-bar-content" style="margin-right: {{percent}}%"></div>
+			</div>
+			<div class="values text-right">
+				Objetivo: <span>R$ {{formatNumber campaign.targetValue}}</span>
+			</div>
+			<hr>
+			Compartilhar
+			<hr>
+			Início da campanha: {{moFormat campaign.createdAt 'DD [de] MMMM [de] YYYY'}}
+			<div class="user">
+				Por <span>{{campaign.user.name}}</span>
+			</div>
+			<div class="location">
+				Em: <i class="fa fa-map-marker"></i> <span>Location, LL</span>
+			</div>
+			
 		</div>
 	</div>
 </template>

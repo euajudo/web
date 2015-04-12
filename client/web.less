@@ -127,6 +127,20 @@ body {
 	}
 }
 
+.donate-bar {
+	height: 10px;
+	background-color: #ddd;
+	margin-bottom: 2px;
+	border-radius: 5px;
+	overflow: hidden;
+
+	.donate-bar-content {
+		background-color: #00B400;
+		height: 10px;
+		margin-right: 60%;
+	}
+}
+
 .header-area {
 	background-color: #FF4E6A;
 	color: white;
@@ -149,4 +163,68 @@ body {
 	margin-bottom: 20px;
 	display: block;
 	width: 100%;
+}
+
+.campaign-detail {
+
+	.title {
+		font-size: 32px;
+		font-weight: 800;
+	}
+
+	.campaign-media {
+		margin-top: 15px;
+		margin-bottom: 20px;
+		height: 400px;
+		background-color: #eee;
+
+		.campaign-media-image {
+			background-size: cover;
+			background-position: center;
+			height: 100%;
+			width: 100%;
+		}
+	}
+
+	.sidebar {
+		padding-top: 60px;
+
+		> .btn {
+			margin-bottom: 20px;
+			background-color: #00B200;
+			border: none;
+			color: white;
+		}
+
+		.values {
+			font-size: 18px;
+			margin: 10px 0;
+
+			span {
+				font-weight: 400;
+			}
+		}
+
+		.user {
+			font-size: 14px;
+			margin-top: 8px;
+			margin-bottom: 8px;
+
+			span {
+				color: #FF3954;
+			}
+		}
+
+		.location {
+			margin-bottom: 12px;
+
+			span {
+				color: #FF3954;
+			}
+
+			i {
+				font-size: 18px;
+			}
+		}
+	}
 }
