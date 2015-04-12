@@ -8,6 +8,17 @@
 		type: String
 		regEx: SimpleSchema.RegEx.Email
 		label: 'E-mail'
+	type:
+		type: String
+		regEx: SimpleSchema.RegEx.Email
+		allowedValues: ['Person', 'Organization']
+		defaultValue: 'Person'
+		label: 'Tipo'
+		autoform:
+			options: [
+				{label: "Pessoa Física", value: "Person"}
+				{label: "Organização", value: "Organization"}
+			]
 	password:
 		type: String
 		label: 'Senha'

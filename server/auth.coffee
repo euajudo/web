@@ -7,7 +7,7 @@ Meteor.methods
 			password: doc.password
 			profile:
 				name: doc.name
-				type: 'Person'
+				type: doc.type or 'Person'
 
 		return {
 			user: Meteor.users.findOne id
