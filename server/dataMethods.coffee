@@ -1,6 +1,20 @@
 Meteor.methods
 	allCampaigns: ->
+		if not @userId?
+			return 401
+
 		data = Campaigns.find({}, {sort: {createdAt: 1}}).fetch()
+		for item in data
+			item.canonicalUrl = encodeURI("#{process.env.SITE_URL}/campanha/#{item.name}/#{item._id}")
+		return data
+
+	myDonatedCampaigns: ->
+		if not @userId?
+			return 401
+
+		query = {}
+		query["donations.#{@userId}"] = $exists: true
+		data = Campaigns.find(query, {sort: {createdAt: 1}}).fetch()
 		for item in data
 			item.canonicalUrl = encodeURI("#{process.env.SITE_URL}/campanha/#{item.name}/#{item._id}")
 		return data
