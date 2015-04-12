@@ -4,7 +4,13 @@
 			<div class="col-sm-4 col-xs-6">
 				<div class="campaign">
 					<div class="campaign-media">
-						
+						{{#if mainMedia.videoUrl}}
+							<iframe id="ytplayer" type="text/html"  height="170" src="http://www.youtube.com/embed/{{mainMedia.videoUrl}}?autoplay=0&origin=http://example.com" frameborder="0"></iframe>
+						{{else}}
+							{{#if mainMedia.url}}
+								<div class="campaign-media-image" style="background-image: url({{mainMedia.url}})"></div>
+							{{/if}}
+						{{/if}}
 					</div>
 					<div class="campaign-content">
 						<div class="title">
