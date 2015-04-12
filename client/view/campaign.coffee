@@ -29,6 +29,9 @@ Template.CampaignView.events
 		Session.set 'helpActivated', false
 
 	'click #donateCampaign': ->
+		if not Meteor.userId()?
+			FlowRouter.go '/criar-conta'
+
 		Session.set 'helpActivated', false
 		campaign = Campaigns.findOne({_id: Session.get('CurrentCampaign')})
 		value = parseInt $('#donateInput').val()

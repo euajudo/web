@@ -10,6 +10,9 @@ Meteor.methods
 			return Meteor.users.findOne(@userId)
 
 	donate: (value, campaignId) ->
+		if not @userId?
+			return 401
+
 		d = {}
 		d["donations.#{@userId}"] = value: value
 		Campaigns.update campaignId,
