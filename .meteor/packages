@@ -31,3 +31,5 @@ npm-container
 meteorhacks:async
 http
 meteorhacks:picker
+datariot:ganalytics
+meteorhacks:kadira

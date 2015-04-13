@@ -20,6 +20,14 @@ Template.CampaignView.helpers
 		return 100 - percent
 
 
+Template.CampaignCard.helpers
+	percent: ->
+		percent = 100/@targetValue*@donatedValue
+		if percent > 100
+			return 0
+		return 100 - percent
+
+
 Template.CampaignView.events
 	'click #helpCampaign': ->
 		Session.set 'helpActivated', true
@@ -35,5 +43,6 @@ Template.CampaignView.events
 		Session.set 'helpActivated', false
 		campaign = Campaigns.findOne({_id: Session.get('CurrentCampaign')})
 		value = parseInt $('#donateInput').val()
+		GAnalytics.event("campaign","donation");
 
 		Meteor.call 'donate', value, Session.get('CurrentCampaign')
